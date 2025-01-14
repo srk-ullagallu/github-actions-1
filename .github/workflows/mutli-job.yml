@@ -4,7 +4,7 @@ jobs:
     unit-testing:
         runs-on: ubuntu-latest
         steps:
-          
+
         - name: unit
           run: echo "unit tests are complted" > results.txt
 
@@ -21,7 +21,6 @@ jobs:
         - uses: actions/download-artifact@v4
           with:
             name: unit-test results
-            path: results.txt
 
         - name: see the results
           run: cat results.txt
@@ -37,7 +36,6 @@ jobs:
         - uses: actions/download-artifact@v4
           with:
             name: unit-test results
-            path: results.txt
 
         - name: see the results
           run: cat results.txt
