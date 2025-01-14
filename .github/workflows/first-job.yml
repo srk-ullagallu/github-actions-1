@@ -7,12 +7,18 @@ jobs:
         
         - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Welcome
-          run: echo "my first githubactions"
+        
+        # - name: Welcome
+        #   run: echo "my first githubactions"
           
-        - name: listing
-          run: ls -l
+        # - name: listing
+        #   run: ls -l
 
-        - name: Read the file
-          run: cat README.md
+        # - name: Read the file
+        #   run: cat README.md
+
+        - name: List and read the files
+          run: |
+            echo "Print the Welcome message"
+            ls -l
+            cat README.md
