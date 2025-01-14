@@ -4,23 +4,27 @@ jobs:
     unit-testing:
         runs-on: ubuntu-latest
         steps:
+          
         - name: unit
-          run: echo "unit tests are complted" >> unit-test.txt
+          run: echo "unit tests are complted" > results.txt
+
         - uses: actions/upload-artifact@v4
           with:
             name: unit-test results
-            path: unit-test.txt
+            path: results.txt
 
     docker-build:
         needs: unit-testing
         runs-on: ubuntu-latest
+
         steps:
         - uses: actions/download-artifact@v4
           with:
             name: unit-test results
-            path: unit-test.txt
+            path: results.txt
+
         - name: see the results
-          run: cat unit-test.txt
+          run: cat results.txt
 
         - name: docker build
           run: echo "docker build completed"
@@ -33,7 +37,10 @@ jobs:
         - uses: actions/download-artifact@v4
           with:
             name: unit-test results
-            path: unit-test.txt
+            path: results.txt
+
+        - name: see the results
+          run: cat results.txt
         
         - name: deploy
           run: echo "deploy to ecs"
