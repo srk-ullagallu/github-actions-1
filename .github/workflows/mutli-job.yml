@@ -20,7 +20,7 @@ jobs:
             name: unit-test results
             path: unit-test.txt
         - name: see the results
-          run: cat dragon.txt
+          run: cat unit-test.txt
 
         - name: docker build
           run: echo "docker build completed"
