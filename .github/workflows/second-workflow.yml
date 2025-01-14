@@ -11,7 +11,7 @@ jobs:
         - name: Listing files
           run: ls -lrta 
 
-        # - name: List and read the files
-        #   run: |
-        #     chmod +x asci.sh
-        #     ./asci.sh
+        - name: List and read the files
+          run: |
+            chmod +x asci.sh
+            ./asci.sh
