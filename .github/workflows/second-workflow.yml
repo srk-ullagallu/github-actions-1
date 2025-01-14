@@ -1,0 +1,17 @@
+name: Second Work Flow
+on: push
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        
+        - name: Checkout
+          uses: actions/checkout@v4
+        
+        - name: Listing files
+          run: ls -lrta 
+
+        - name: List and read the files
+          run: |
+            chmod +x asci.sh
+            ./asci.sh
