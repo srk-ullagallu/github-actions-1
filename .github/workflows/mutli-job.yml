@@ -1,4 +1,4 @@
-name: First Work Flow
+name: Multi-Job
 on: push
 jobs:
     unit-testing:
