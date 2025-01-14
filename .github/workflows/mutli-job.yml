@@ -1,0 +1,21 @@
+name: First Work Flow
+on: push
+jobs:
+    unit-testing:
+        runs-on: ubuntu-latest
+        steps:
+        - name: unit
+          run: echo "unit tests are complted"
+
+    docker-build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: docker build
+          run: echo "docker build completed"
+    
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+        
+        - name: deploy
+          run: echo "deploy to ecs"
