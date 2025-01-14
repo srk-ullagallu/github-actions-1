@@ -8,12 +8,14 @@ jobs:
           run: echo "unit tests are complted"
 
     docker-build:
+        needs: unit-testing
         runs-on: ubuntu-latest
         steps:
         - name: docker build
           run: echo "docker build completed"
     
     deploy:
+        needs: docker-build
         runs-on: ubuntu-latest
         steps:
         
